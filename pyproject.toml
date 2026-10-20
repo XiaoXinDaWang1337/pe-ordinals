@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pe-ordinals"
+version = "0.1.0"
+description = "PE import analysis that does not miss by-ordinal imports (ws2_32 send/sendto and friends)"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "pe-ordinals contributors" }]
+keywords = ["pe", "portable-executable", "reverse-engineering", "imports", "ordinal", "windows", "malware-analysis"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Topic :: Security",
+  "Topic :: Software Development :: Disassemblers",
+  "Programming Language :: Python :: 3",
+  "Operating System :: Microsoft :: Windows",
+]
+
+[project.scripts]
+peord = "peord.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/XiaoXinDaWang1337/pe-ordinals"
+
+[tool.setuptools.packages.find]
+where = ["src"]
